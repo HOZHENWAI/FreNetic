@@ -221,8 +221,8 @@ class FreNetic(object):
             if pos is not None:
                 synsets = [syn for syn in synsets if syn.pos() == pos]
             return synsets
-        elif unicode(lex_span) in self._lex_spans:
-            synsets = self._lex_spans[unicode(lex_span)]
+        elif u"%s" %str(lex_span) in self._lex_spans:
+            synsets = self._lex_spans[u"%s" %str(lex_span)]
             if pos is not None:
                 synsets = [syn for syn in synsets if syn.pos() == pos]
             return synsets
